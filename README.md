@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# <div align="center">Kombucha Bar</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+    <br>
+    <a href="https://github.com/besscampbell">
+        <img src="https://github.com/besscampbell.png" width="150px" height="auto">
+    <a href="https://github.com/">
+        <img src="" width="150px" height="auto">
+    </a>
+</p>
 
-## Available Scripts
+<p align="center">
+  <small>Last Updated: February 12th, 2021</small>
+</p>
 
-In the project directory, you can run:
+# ℹ️ Description
 
-### `npm start`
+ Tap Room, Friday Project for Epicodus<br>
+This will be a two-week project. Spend today building a tap room in React where a bar or kombucha store can track their kegs. This could also be a soda fountain or another kind of tracker - as long as you're able to track the remaining amount and meet the objectives, you can be creative with this prompt.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Before getting started, plan out your application and draw a component tree or component diagram that shows the structure of your components. This is a requirement for the project and should be included in your README. You may draw the structure on a piece of paper and take a picture of it or use an application like https://www.draw.io/.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# 💁🏽‍♀️ User Stories
 
-### `npm test`
+Here are some user stories to get you started. The application should have the following functionality:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+As a user, I want to see a list/menu of all available kegs. For each keg, I want to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
+As a user, I want to submit a form to add a new keg to a list.
+As a user, I want to be able to click on a keg to see its detail page.
+As a user, I want to see how many pints are left in a keg. Hint: A full keg has roughly 124 pints.
+As a user, I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1. Pints should not be able to go below 0.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 📊 Components Diagram
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Components Diagram](./ReadMeAssets/Kombucha-components-diagram.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 🧑‍💻 Contributer
 
-### `npm run eject`
+| Name | GitHub Profile |
+|------|----------------|
+| [Bess Campbelll](https://www.linkedin.com/in/bess-campbell/) | [besscampbell](https://github.com/besscampbell)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# ⚙️ Technologies Used
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Git/GitHub](https://github.com/)
+* [React JS](https://reactjs.org/)
+    • This project was built with the `create-react-app` command.
+* [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS)
+* [Bootstrap](https://getbootstrap.com/)
+* [Node.js](https://nodejs.org/en/)
+* [npm](https://www.npmjs.com/get-npm)
+* [Babel](https://babeljs.io/)
+* [Eslint](https://eslint.org/)
+* [Webpack](https://webpack.js.org/)
+* [DrawIO](https://www.draw.io/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# 💾 Installation Requirements
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## For Both Mac & Windows systems
 
-## Learn More
+#### To Clone:
+- Open your preferred command line program.
+- Navigate to the location or directory you'd like the project directory to be created in. (e.g., "cd Desktop" if you'd like to clone the project to your desktop)
+- Enter the command "$ git clone https://github.com//" in your command line.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### To Download:
+- Navigate to the [project repository](https://github.com/besscampbell/kombucha-bar.git) in your browser.
+- Click the green "Code" button toward the top right of the page.
+- Click "Download ZIP" and extract the files.
+- Open the newly-downloaded project in your preferred code editor.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# 🖥️ Opening the Project on your Local System
 
-### Analyzing the Bundle Size
+Once the project has been cloned and you have all the necessary items on your local computer, open the project in the application of your choice ([Visual Code Studio](https://code.visualstudio.com/) was used and is recommended by the application builder)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Run the project:
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+# ☎️ Support / Contact Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* [Bess Campbell](bess.k.campbell@gmail.com)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 🐛 Bugs / Issues
+
+| Date | Error | Handled | Solution |
+| :------------- | :------------- | :------------- | :------------- |
+|  |  | ✅  |  |
+
+
+
+# ©️ License & Copyright
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2021 *_Bess Cammpbell_*
