@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 function Keg(props){
 
   let availability;
-  if(props.pintsRemaining > 10){
+  if(props.pintsRemaining > 9){
     availability = `Approximately ${props.pintsRemaining} pints left in the keg`;
   } else if (props.pintsRemaining > 0) {
-    availability = `Almost gone, only about ${props.pintsRemaining} pints left!`;
+    availability = `Almost empty, only about ${props.pintsRemaining} pints left!`;
   } else {
     availability = "Out of Stock";
   }

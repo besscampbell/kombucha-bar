@@ -32,18 +32,24 @@ class KegControl extends React.Component {
     this.setState({masterKegMenu: newMasterKegMenu,
                   formInView: false});
   }
+
+  handleKegInView = (id) => {
+    const selectedKeg = this.state.masterKegMenu.filter(keg => keg.id)[0];
+    this.setState({kegInView: selectedKeg});
+  }
+
   render(){
     let visibleNow = null;
     let buttonText = null;
     if(this.state.kegInView != null){
-      visibleNow = <KegSpecs />
+      visibleNow = <KegSpecs keg={this.state.kegInView}/>
       buttonText="Booch Menu"
     } else if (this.state.formInView){
-      visibleNow = <KegMenu kegMenu={this.state.masterKegMenu}/>
-      buttonText="+ new Booch"
-    } else {
       visibleNow = <NewKeg onNewKeg={this.handleAddNewKeg}/>
       buttonText="Booch Menu"
+    } else {
+      visibleNow = <KegMenu kegMenu={this.state.masterKegMenu} onKegSelection={this.handleKegInView}/>
+      buttonText="+ new Booch"
     }
 
     return(
