@@ -7,8 +7,12 @@ function KegSpecs(props) {
   let availability;
   if(keg.pintsRemaining > 9){
     availability = `Approximately ${keg.pintsRemaining} pints left in the keg`;
-  } else if (keg.pintsRemaining > 0) {
-    availability = `Almost empty, only about ${keg.pintsRemaining} pints left!`;
+  } else if (keg.pintsRemaining > 0 && keg.untappedKegs === 0) {
+    availability = `Almost empty, only ${keg.pintsRemaining} pint${keg.pintsRemaining === 1 ? "": "s"} left and you haven't Restocked yet!`;
+  }  else if (keg.pintsRemaining > 0) {
+    availability = `Almost empty, only about ${keg.pintsRemaining} pint${keg.pintsRemaining === 1 ? "": "s"} left. Good thing you have another keg!`;
+  } else if (keg.pintRemaining === 0 && keg.untappedKegs ===0){
+    availability = "Time to change the keg"
   } else {
     availability = "Out of Stock";
   }
@@ -27,7 +31,8 @@ function KegSpecs(props) {
 }
 
 KegSpecs.propTypes = {
-  keg: PropTypes.object
+  keg: PropTypes.object,
+  onRestock: PropTypes.func
 }
 
 export default KegSpecs;

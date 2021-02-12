@@ -7,7 +7,7 @@ class KegControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formInView: false,
+      formInView: true,
       masterKegMenu: [],
       kegInView: null
     };
@@ -34,20 +34,23 @@ class KegControl extends React.Component {
   }
 
   handleKegInView = (id) => {
-    const selectedKeg = this.state.masterKegMenu.filter(keg => keg.id)[0];
+    const selectedKeg = this.state.masterKegMenu.filter(keg => keg.id === id)[0];
     this.setState({kegInView: selectedKeg});
   }
 
-  // handleRestock = () => {
-  //   const pintsInKeg = this.state.kegInView.pintsRemaining;
-  //   const restockedKeg = {}
-  // }
+  handleRestock = () => {
+    const untappedKegs = this.state.kegInView.untappedKegs;
+    const restockedKeg = {...this.state.kegInView, untappedKegs:(untappedKegs + 1)};
+    const newMasterKegMenu = this.state.masterKegMenu.filter(keg => keg.id !== this.state.kegInView.id).concat(restockedKeg);
+    this.setState({kegInView: restockedKeg,
+                  masterKegMenu: newMasterKegMenu});
+  }
 
   render(){
     let visibleNow = null;
     let buttonText = null;
     if(this.state.kegInView != null){
-      visibleNow = <KegSpecs keg={this.state.kegInView}/>
+      visibleNow = <KegSpecs keg={this.state.kegInView} onRestock={this.handleRestock}/>
       buttonText="Booch Menu"
     } else if (!this.state.formInView){
       visibleNow = <KegMenu kegMenu={this.state.masterKegMenu} onKegSelection={this.handleKegInView}/>
