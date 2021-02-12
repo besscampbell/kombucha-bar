@@ -6,6 +6,7 @@ function ReusableForm(props){
     <React.Fragment>
       <form onSubmit={props.formHandler}>
         <div className="form-group">
+          <label htmlFor="brand">Brand:</label>
           <input
             type="text"
             name="brand"
@@ -15,6 +16,7 @@ function ReusableForm(props){
              />
         </div>
         <div className="form-group">
+          <label htmlFor="flavor">Flavor:</label>
           <input
             type="text"
             name="flavor"
@@ -53,6 +55,16 @@ function ReusableForm(props){
             placeholder="124"
             min="0"
             required
+            // value={props.pintsRemaining}
+             />
+          </div>
+          <div className="form-group">
+          <label htmlFor="untappedKegs">Untapped Kegs:</label>
+          <input
+            type="number"
+            name="untappedKegs"
+            placeholder="0"
+            min="0"
             // value={props.pintsRemaining}
              />
           </div>

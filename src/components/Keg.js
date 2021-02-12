@@ -7,8 +7,12 @@ function Keg(props){
   let availability;
   if(props.pintsRemaining > 9){
     availability = `Approximately ${props.pintsRemaining} pints left in the keg`;
-  } else if (props.pintsRemaining > 0) {
-    availability = `Almost empty, only about ${props.pintsRemaining} pints left!`;
+  } else if (props.pintsRemaining > 0 && props.untappedKegs === 0) {
+    availability = `Almost empty, only about ${props.pintsRemaining} pints left and you haven't Restocked yet!`;
+  }  else if (props.pintsRemaining > 0) {
+    availability = `Almost empty, only about ${props.pintsRemaining} pints left. Good thing you have another keg!`;
+  } else if (props.pintRemaining === 0 && props.untappedKegs ===0){
+    availability = "Time to change the keg"
   } else {
     availability = "Out of Stock";
   }
@@ -27,6 +31,7 @@ function Keg(props){
 Keg.propTypes = {
   brand: PropTypes.string,
   flavor: PropTypes.string,
+  untappedKegs: PropTypes.number,
   pintsRemaining: PropTypes.number,
   id: PropTypes.string,
   whenKegClicked: PropTypes.func

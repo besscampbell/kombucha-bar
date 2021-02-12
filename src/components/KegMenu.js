@@ -13,6 +13,7 @@ function KegMenu(props){
           flavor={keg.flavor}
           kegPrice={keg.kegPrice}
           pricePerPint={keg.pricePerPint}
+          untappedKegs={keg.untappedKegs}
           pintsRemaining={keg.pintsRemaining}
           id={keg.id}
           key={keg.id}/>
