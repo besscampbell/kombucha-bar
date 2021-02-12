@@ -39,7 +39,7 @@ class KegControl extends React.Component {
       visibleNow = <KegSpecs />
       buttonText="Booch Menu"
     } else if (this.state.formInView){
-      visibleNow = <KegMenu />
+      visibleNow = <KegMenu kegMenu={this.state.masterKegMenu}/>
       buttonText="+ new Booch"
     } else {
       visibleNow = <NewKeg onNewKeg={this.handleAddNewKeg}/>
@@ -48,8 +48,9 @@ class KegControl extends React.Component {
 
     return(
       <React.Fragment>
-        {visibleNow}
         <button onClick={this.handleClick}>{buttonText}</button>
+        <hr/>
+        {visibleNow}
       </React.Fragment>
     );
   }

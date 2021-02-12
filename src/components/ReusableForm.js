@@ -10,6 +10,7 @@ function ReusableForm(props){
             type="text"
             name="brand"
             placeholder="Brand"
+            required
             // value={props.brand}
              />
         </div>
@@ -18,6 +19,7 @@ function ReusableForm(props){
             type="text"
             name="flavor"
             placeholder="Flavor"
+            required
             // value={props.flavor} 
             />
         </div>
@@ -50,6 +52,7 @@ function ReusableForm(props){
             name="pintsRemaining"
             placeholder="124"
             min="0"
+            required
             // value={props.pintsRemaining}
              />
           </div>
