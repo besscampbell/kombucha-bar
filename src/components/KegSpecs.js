@@ -32,7 +32,8 @@ function KegSpecs(props) {
 
 KegSpecs.propTypes = {
   keg: PropTypes.object,
-  onRestock: PropTypes.func
+  onRestock: PropTypes.func,
+  onBuy: PropTypes.func
 }
 
 export default KegSpecs;

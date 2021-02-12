@@ -46,11 +46,19 @@ class KegControl extends React.Component {
                   masterKegMenu: newMasterKegMenu});
   }
 
+  handleBuy = () => {
+    const pintsRemaining = this.state.kegInView.pintsRemaining;
+    const updatedKeg = {...this.state.kegInView, pintsRemaining:(pintsRemaining - 1)};
+    const newMasterKegMenu = this.state.masterKegMenu.filter(keg => keg.id !== this.state.kegInView.id).concat(updatedKeg);
+    this.setState({kegInView: updatedKeg,
+                  masterKegMenu: newMasterKegMenu});
+  }
+
   render(){
     let visibleNow = null;
     let buttonText = null;
     if(this.state.kegInView != null){
-      visibleNow = <KegSpecs keg={this.state.kegInView} onRestock={this.handleRestock}/>
+      visibleNow = <KegSpecs keg={this.state.kegInView} onRestock={this.handleRestock} onBuy={this.handleBuy}/>
       buttonText="Booch Menu"
     } else if (!this.state.formInView){
       visibleNow = <KegMenu kegMenu={this.state.masterKegMenu} onKegSelection={this.handleKegInView}/>
