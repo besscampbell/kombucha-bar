@@ -4,9 +4,6 @@
     <br>
     <a href="https://github.com/besscampbell">
         <img src="https://github.com/besscampbell.png" width="150px" height="auto">
-    <a href="https://github.com/">
-        <img src="" width="150px" height="auto">
-    </a>
 </p>
 
 <p align="center">
@@ -24,11 +21,11 @@ Before getting started, plan out your application and draw a component tree or c
 
 Here are some user stories to get you started. The application should have the following functionality:
 
-As a user, I want to see a list/menu of all available kegs. For each keg, I want to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
-As a user, I want to submit a form to add a new keg to a list.
-As a user, I want to be able to click on a keg to see its detail page.
-As a user, I want to see how many pints are left in a keg. Hint: A full keg has roughly 124 pints.
-As a user, I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1. Pints should not be able to go below 0.
+* As a user, I want to see a list/menu of all available kegs. For each keg, I want to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
+* As a user, I want to submit a form to add a new keg to a list.
+* As a user, I want to be able to click on a keg to see its detail page.
+* As a user, I want to see how many pints are left in a keg. Hint: A full keg has roughly 124 pints.
+* As a user, I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1. Pints should not be able to go below 0.
 
 
 # 📊 Components Diagram
@@ -85,7 +82,7 @@ Once the project has been cloned and you have all the necessary items on your lo
 
 # ☎️ Support / Contact Details
 
-* [Bess Campbell](bess.k.campbell@gmail.com)
+* [Bess Campbell](mailto:bess.k.campbell@gmail.com)
 
 
 # 🐛 Bugs / Issues
