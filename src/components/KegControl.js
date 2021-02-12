@@ -24,6 +24,14 @@ class KegControl extends React.Component {
         formInView: !prevState.formInView}));
     }
   }
+
+  handleAddNewKeg = (newKeg) =>{
+    const newMasterKegMenu = this.state.masterKegMenu.concat(newKeg);
+    console.log(newKeg);
+    console.log(newMasterKegMenu);
+    this.setState({masterKegMenu: newMasterKegMenu,
+                  formInView: false});
+  }
   render(){
     let visibleNow = null;
     let buttonText = null;
@@ -34,7 +42,7 @@ class KegControl extends React.Component {
       visibleNow = <KegMenu />
       buttonText="+ new Booch"
     } else {
-      visibleNow = <NewKeg />
+      visibleNow = <NewKeg onNewKeg={this.handleAddNewKeg}/>
       buttonText="Booch Menu"
     }
 
