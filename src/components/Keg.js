@@ -8,9 +8,9 @@ function Keg(props){
   if(props.pintsRemaining > 9){
     availability = `Approximately ${props.pintsRemaining} pints left in the keg`;
   } else if (props.pintsRemaining > 0 && props.untappedKegs === 0) {
-    availability = `Almost empty, only about ${props.pintsRemaining} pints left and you haven't Restocked yet!`;
+    availability = `Almost empty, only ${props.pintsRemaining} pint${props.pintsRemaining === 1 ? "": "s"} left and you haven't Restocked yet!`;
   }  else if (props.pintsRemaining > 0) {
-    availability = `Almost empty, only about ${props.pintsRemaining} pints left. Good thing you have another keg!`;
+    availability = `Almost empty, only about ${props.pintsRemaining} pint${props.pintsRemaining === 1 ? "": "s"} left. Good thing you have another keg!`;
   } else if (props.pintRemaining === 0 && props.untappedKegs ===0){
     availability = "Time to change the keg"
   } else {

@@ -17,7 +17,7 @@ class KegControl extends React.Component {
     if(this.state.kegInView != null){
       this.setState({
         formInView: false,
-        kegInView: null,
+        kegInView: null
       });
     } else {
       this.setState(prevState => ({
@@ -38,18 +38,23 @@ class KegControl extends React.Component {
     this.setState({kegInView: selectedKeg});
   }
 
+  // handleRestock = () => {
+  //   const pintsInKeg = this.state.kegInView.pintsRemaining;
+  //   const restockedKeg = {}
+  // }
+
   render(){
     let visibleNow = null;
     let buttonText = null;
     if(this.state.kegInView != null){
       visibleNow = <KegSpecs keg={this.state.kegInView}/>
       buttonText="Booch Menu"
-    } else if (this.state.formInView){
-      visibleNow = <NewKeg onNewKeg={this.handleAddNewKeg}/>
-      buttonText="Booch Menu"
-    } else {
+    } else if (!this.state.formInView){
       visibleNow = <KegMenu kegMenu={this.state.masterKegMenu} onKegSelection={this.handleKegInView}/>
       buttonText="+ new Booch"
+    } else {
+      visibleNow = <NewKeg onNewKeg={this.handleAddNewKeg}/>
+      buttonText="Booch Menu"
     }
 
     return(

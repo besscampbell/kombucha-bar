@@ -33,6 +33,7 @@ function ReusableForm(props){
             placeholder="0.00"
             min="0"
             step="0.01"
+            required
             // value={props.kegPrice} 
             />
         </div>
@@ -44,6 +45,7 @@ function ReusableForm(props){
             placeholder="0.00"
             min="0"
             step="0.01"
+            required
             // value={props.pricePerPint} 
             />
         </div>
@@ -65,6 +67,7 @@ function ReusableForm(props){
             name="untappedKegs"
             placeholder="0"
             min="0"
+            required
             // value={props.pintsRemaining}
              />
           </div>
