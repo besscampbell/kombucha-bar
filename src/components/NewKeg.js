@@ -7,7 +7,11 @@ function NewKeg(props){
 
   function handleNewKegForm(event){
     event.preventDefault();
-    props.onNewKeg({brand: event.target.brand.value, flavor: event.target.flavor.value, pricePerPint: parseFloat(event.target.pricePerPint.value), kegPrice: parseFloat(event.target.kegPrice.value), pintsRemaining: parseInt(event.target.pintsRemaining.value), id: v4()});
+    props.onNewKeg({
+      brand: event.target.brand.value,
+      flavor: event.target.flavor.value,
+      pricePerPint: parseFloat(event.target.pricePerPint.value), kegPrice: parseFloat(event.target.kegPrice.value), pintsRemaining: parseInt(event.target.pintsRemaining.value),
+      id: v4()});
   }
 
   return(
