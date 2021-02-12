@@ -10,44 +10,48 @@ function ReusableForm(props){
             type="text"
             name="brand"
             placeholder="Brand"
-            value={props.brand} />
+            // value={props.brand}
+             />
         </div>
         <div className="form-group">
           <input
             type="text"
             name="flavor"
             placeholder="Flavor"
-            value={props.flavor} />
+            // value={props.flavor} 
+            />
         </div>
         <div className="form-group">
-          <label for="kegPrice">Keg Price: $</label>
+          <label htmlFor="kegPrice">Keg Price: $</label>
           <input
-            for="kegPrice"
-            type="float"
+            type="number"
             name="kegPrice"
             placeholder="0.00"
             min="0"
-            value={props.kegPrice} />
+            step="0.01"
+            // value={props.kegPrice} 
+            />
         </div>
         <div className="form-group">
-          <label for="pricePerPint">Price per Pint: $</label>
+          <label htmlFor="pricePerPint">Price per Pint: $</label>
           <input
-            for="pricePerPint"
-            type="float"
+            type="number"
             name="pricePerPint"
             placeholder="0.00"
             min="0"
-            value={props.pricePerPint} />
+            step="0.01"
+            // value={props.pricePerPint} 
+            />
         </div>
         <div className="form-group">
-          <label for="pintsRemaining">Pints remaining:</label>
+          <label htmlFor="pintsRemaining">Pints remaining:</label>
           <input
-            for="pintsRemaining"
             type="number"
             name="pintsRemaining"
             placeholder="124"
             min="0"
-            value={props.pintsRemaining} />
+            // value={props.pintsRemaining}
+             />
           </div>
         <button type="submit">{props.buttonText}</button>
       </form>
