@@ -54,7 +54,7 @@ Here are some user stories to get you started. The application should have the f
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Git/GitHub](https://github.com/)
 * [React JS](https://reactjs.org/)
-    • This project was built with the `create-react-app` command.
+    **_This project was built with the `create-react-app` command._**
 * [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS)
 * [Bootstrap](https://getbootstrap.com/)
 * [Node.js](https://nodejs.org/en/)
@@ -80,16 +80,15 @@ Here are some user stories to get you started. The application should have the f
 - Open the newly-downloaded project in your preferred code editor.
 
 
-
 # 🖥️ Opening the Project on your Local System
 
 Once the project has been cloned and you have all the necessary items on your local computer, open the project in the application of your choice ([Visual Code Studio](https://code.visualstudio.com/) was used and is recommended by the application builder)
 
-
-
 ### Run the project:
 
-
+1. In the terminal type `npm install` to install the JSON package
+2. Once the install has finished  type `npm run build` into the terminal to compile the project
+3. Run `npm start` to view the site in a browser.
 
 # ☎️ Support / Contact Details
 
@@ -100,7 +99,7 @@ Once the project has been cloned and you have all the necessary items on your lo
 
 | Date | Error | Handled | Solution |
 | :------------- | :------------- | :------------- | :------------- |
-|  |  | ✅  |  |
+|2.12.20201|Buttons not hiding | ✅  |Correct hidden conditional and propTypes verbage  |
 
 
 
