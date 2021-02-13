@@ -4,6 +4,7 @@
     <br>
     <a href="https://github.com/besscampbell">
         <img src="https://github.com/besscampbell.png" width="150px" height="auto">
+    </a>
 </p>
 
 <p align="center">
@@ -27,6 +28,16 @@ Here are some user stories to get you started. The application should have the f
 * As a user, I want to see how many pints are left in a keg. Hint: A full keg has roughly 124 pints.
 * As a user, I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1. Pints should not be able to go below 0.
 
+# 🧗🏼‍♀️ Further Exploration
+
+* As a user, I want to be able to restock kegs.
+* As a user, I want to be able to press a button to tap a keg if there is one instock.
+* As a user, I want the option to edit a keg's properties after entering them just in case I make a mistake.
+* As a user, I want to be able to delete a keg.
+* As a user, I want a keg to update to say "Out of Stock" once it's empty.
+* As a user, I want kegs with less than 10 pints to include a message that says "Almost Empty" so I can try a pint before it's gone!
+* As a user, I want to have kegs prices to be color-coded for easy readability. This could be based on their price, the style of beer or kombucha, or the amount of pints left.
+* As a user, I want this application to be nicely styled. (Use stylesheets and CSS objects!)
 
 # 📊 Components Diagram
 
@@ -59,8 +70,8 @@ Here are some user stories to get you started. The application should have the f
 
 #### To Clone:
 - Open your preferred command line program.
-- Navigate to the location or directory you'd like the project directory to be created in. (e.g., "cd Desktop" if you'd like to clone the project to your desktop)
-- Enter the command "$ git clone https://github.com//" in your command line.
+- Navigate to the location or directory you'd like the project directory to be created in. (e.g., `cd Desktop` if you'd like to clone the project to your desktop)
+- Enter the command `$ git clone https://github.com/besscampbell/kombucha-bar.git` in your command line.
 
 #### To Download:
 - Navigate to the [project repository](https://github.com/besscampbell/kombucha-bar.git) in your browser.
@@ -97,4 +108,4 @@ Once the project has been cloned and you have all the necessary items on your lo
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2021 *_Bess Campbell_*
+Copyright (c) 2021 *_Bess Cammpbell_*
