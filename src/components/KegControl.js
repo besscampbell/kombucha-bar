@@ -49,6 +49,7 @@ class KegControl extends React.Component {
   handleBuy = () => {
     const pintsRemaining = this.state.kegInView.pintsRemaining;
     const updatedKeg = {...this.state.kegInView, pintsRemaining:(pintsRemaining - 1)};
+    console.log(updatedKeg);
     const newMasterKegMenu = this.state.masterKegMenu.filter(keg => keg.id !== this.state.kegInView.id).concat(updatedKeg);
     this.setState({kegInView: updatedKeg,
                   masterKegMenu: newMasterKegMenu});
@@ -56,10 +57,15 @@ class KegControl extends React.Component {
 
   handleTapNewKeg = () => {
     const backupKegs = this.state.kegInView.untappedKegs;
-    const updatedKeg = {...this.state.kegInView, pintsRemaining:(124), untappedKegs: (backupKegs - 1)};
-    const newMasterKegMenu = this.state.masterKegMenu.filter(keg => keg.id !== this.state.kegInView.id).concat(updatedKeg);
-    this.setState({kegInView: updatedKeg,
-                  masterKegMenu: newMasterKegMenu});
+    const pints = this.state.kegInView.pintsRemaining;
+    if (backupKegs > 0 && pints === 0){
+      const updatedKeg = {...this.state.kegInView, pintsRemaining:(124), untappedKegs: (backupKegs - 1)};
+      const newMasterKegMenu = this.state.masterKegMenu.filter(keg => keg.id !== this.state.kegInView.id).concat(updatedKeg);
+      this.setState({kegInView: updatedKeg,
+                    masterKegMenu: newMasterKegMenu});
+    } else {
+      alert("You cannot tap a keg if you have pints left or if you have no keg to replace it. ");
+    }
   }
 
   render(){
