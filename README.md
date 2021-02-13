@@ -30,12 +30,15 @@ Here are some user stories to get you started. The application should have the f
 
 # 🧗🏼‍♀️ Further Exploration
 
+## Completed:
 * As a user, I want to be able to restock kegs.
 * As a user, I want to be able to press a button to tap a keg if there is one instock.
-* As a user, I want the option to edit a keg's properties after entering them just in case I make a mistake.
-* As a user, I want to be able to delete a keg.
 * As a user, I want a keg to update to say "Out of Stock" once it's empty.
 * As a user, I want kegs with less than 10 pints to include a message that says "Almost Empty" so I can try a pint before it's gone!
+
+## To do:
+* As a user, I want the option to edit a keg's properties after entering them just in case I make a mistake.
+* As a user, I want to be able to delete a keg.
 * As a user, I want to have kegs prices to be color-coded for easy readability. This could be based on their price, the style of beer or kombucha, or the amount of pints left.
 * As a user, I want this application to be nicely styled. (Use stylesheets and CSS objects!)
 
@@ -99,7 +102,7 @@ Once the project has been cloned and you have all the necessary items on your lo
 
 | Date | Error | Handled | Solution |
 | :------------- | :------------- | :------------- | :------------- |
-|2.12.20201|Buttons not hiding | ✅  |Correct hidden conditional and propTypes verbage  |
+|2.13.20201|Buttons not hiding | ✅  |Correct hidden conditional and propTypes verbage  |
 
 
 
