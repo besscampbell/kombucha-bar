@@ -5,16 +5,28 @@ function KegSpecs(props) {
   const { keg } = props;
 
   let availability;
+  // let buttonText;
+  // let buttonMethod;
+  // let buttonHidden;
   if(keg.pintsRemaining > 9){
     availability = `Approximately ${keg.pintsRemaining} pints left in the keg`;
+    // buttonText="Pint Pour";
+    // buttonMethod=props.onBuy;
   } else if (keg.pintsRemaining > 0 && keg.untappedKegs === 0) {
     availability = `Almost empty, only ${keg.pintsRemaining} pint${keg.pintsRemaining === 1 ? "": "s"} left and you haven't Restocked yet!`;
+    // buttonText="Pint Pour";
+    // buttonMethod=props.onBuy;
   }  else if (keg.pintsRemaining > 0) {
     availability = `Almost empty, only about ${keg.pintsRemaining} pint${keg.pintsRemaining === 1 ? "": "s"} left. Good thing you have another keg!`;
-  } else if (keg.pintRemaining === 0 && keg.untappedKegs ===0){
+    // buttonText="Pint Pour"
+    // buttonMethod=props.onBuy
+  } else if (keg.pintRemaining === 0 && keg.untappedKegs > 0){
     availability = "Time to change the keg"
+    // buttonText="Tap Keg";
+    // buttonMethod=;
   } else {
     availability = "Out of Stock";
+    // buttonHidden=(props.untappedKegs===0);
   }
 
   return (
@@ -25,7 +37,8 @@ function KegSpecs(props) {
       <h3>Untapped Kegs: {keg.untappedKegs}</h3>
       <h3>Pints remaining: {availability}</h3>
       <button type="button" onClick={props.onRestock} className="btn btn-primary">Restock</button>
-      <button hidden={keg.pintsRemaining === 0} type="button" onClick={props.onBuy} className="btn btn-success">Buy</button>
+      <button hidden={props.pintsRemaining === 0} type="button" onClick={props.onBuy} className="btn btn-success">Pint Pour</button>
+      <button hidden={(props.untappedKegs + props.pintsRemaining === 0) || props.pintsRemaining !== 0 } type="button" onClick={props.onTapNewKeg} className="btn btn-success">Tap Keg</button>
     </React.Fragment>
   );
 }
@@ -33,7 +46,8 @@ function KegSpecs(props) {
 KegSpecs.propTypes = {
   keg: PropTypes.object,
   onRestock: PropTypes.func,
-  onBuy: PropTypes.func
+  onBuy: PropTypes.func,
+  onTapNewKeg: PropTypes.func
 }
 
 export default KegSpecs;

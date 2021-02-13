@@ -11,7 +11,7 @@ function Keg(props){
     availability = `Almost empty, only ${props.pintsRemaining} pint${props.pintsRemaining === 1 ? "": "s"} left and you haven't Restocked yet!`;
   }  else if (props.pintsRemaining > 0) {
     availability = `Almost empty, only about ${props.pintsRemaining} pint${props.pintsRemaining === 1 ? "": "s"} left. Good thing you have another keg!`;
-  } else if (props.pintRemaining === 0 && props.untappedKegs ===0){
+  } else if (props.pintRemaining === 0 && props.untappedKegs > 0){
     availability = "Time to change the keg"
   } else {
     availability = "Out of Stock";
