@@ -12,7 +12,6 @@ function ReusableForm(props){
             name="brand"
             placeholder="Brand"
             required
-            // value={props.brand}
              />
         </div>
         <div className="form-group">
@@ -22,7 +21,6 @@ function ReusableForm(props){
             name="flavor"
             placeholder="Flavor"
             required
-            // value={props.flavor} 
             />
         </div>
         <div className="form-group">
@@ -34,7 +32,6 @@ function ReusableForm(props){
             min="0"
             step="0.01"
             required
-            // value={props.kegPrice} 
             />
         </div>
         <div className="form-group">
