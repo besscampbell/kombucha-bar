@@ -46,7 +46,6 @@ function ReusableForm(props){
             min="0"
             step="0.01"
             required
-            // value={props.pricePerPint} 
             />
         </div>
         <div className="form-group">
@@ -57,7 +56,6 @@ function ReusableForm(props){
             placeholder="124"
             min="0"
             required
-            // value={props.pintsRemaining}
              />
           </div>
           <div className="form-group">
@@ -68,7 +66,6 @@ function ReusableForm(props){
             placeholder="0"
             min="0"
             required
-            // value={props.pintsRemaining}
              />
           </div>
         <button type="submit">{props.buttonText}</button>

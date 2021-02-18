@@ -27,8 +27,6 @@ class KegControl extends React.Component {
 
   handleAddNewKeg = (newKeg) =>{
     const newMasterKegMenu = this.state.masterKegMenu.concat(newKeg);
-    console.log(newKeg);
-    console.log(newMasterKegMenu);
     this.setState({masterKegMenu: newMasterKegMenu,
                   formInView: false});
   }
@@ -49,7 +47,6 @@ class KegControl extends React.Component {
   handleBuy = () => {
     const pintsRemaining = this.state.kegInView.pintsRemaining;
     const updatedKeg = {...this.state.kegInView, pintsRemaining:(pintsRemaining - 1)};
-    console.log(updatedKeg);
     const newMasterKegMenu = this.state.masterKegMenu.filter(keg => keg.id !== this.state.kegInView.id).concat(updatedKeg);
     this.setState({kegInView: updatedKeg,
                   masterKegMenu: newMasterKegMenu});
